@@ -20,6 +20,7 @@ namespace chat.client
 
             Console.WriteLine("Введите ваше имя:");
             string userName = Console.ReadLine();
+
             byte[] userNameBytes = Encoding.UTF8.GetBytes(userName);
             await stream.WriteAsync(userNameBytes, 0, userNameBytes.Length);
 
